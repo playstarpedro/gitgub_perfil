@@ -30,3 +30,13 @@
     padding: 4px;
     border: none;
 }
+
+.search button {
+    margin-left: 10px;
+    background-color: var(--corPrincipal);
+    color: #fff;
+    font-size: 16px;
+    padding: 4px;
+    border-radius: 4px;
+    border: none;
+}

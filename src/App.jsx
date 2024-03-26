@@ -13,6 +13,7 @@ function App() {
       <div className="search">
         <label>Pesquise o perfil de sua escolha:</label>
         <input className='searchBar' type="text" placeholder='Nome do perfil' onBlur={(e) => setNomeUsuario(e.target.value)}/>
+        <button>Pesquisar</button>
       </div>
 
       {nomeUsuario.length > 4 && (
@@ -21,12 +22,6 @@ function App() {
           <ReposList nomeUsuario={nomeUsuario}/>
         </>
       )}
-
-      {/* {formularioEstaVisivel && (
-        <Formulario />
-      )}
-
-      <button onClick={() => setFormularioEstaVisivel(!formularioEstaVisivel)} type="button">toggle form</button> */}
     </>
   )
 }

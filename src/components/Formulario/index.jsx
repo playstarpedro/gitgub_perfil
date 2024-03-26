@@ -22,7 +22,6 @@ const Formulario = () => {
     }, [materiaA, materiaB, materiaC])
 
     const alteraNome = (evento) => {
-        // setNome(evento.target.value)
         setNome(estadoAnterior => {
             return evento.target.value;
         })
