@@ -10,7 +10,10 @@ function App() {
   
   return (
     <>
-      <input type="text" onBlur={(e) => setNomeUsuario(e.target.value)}/>
+      <div className="search">
+        <label>Pesquise o perfil de sua escolha:</label>
+        <input className='searchBar' type="text" placeholder='Nome do perfil' onBlur={(e) => setNomeUsuario(e.target.value)}/>
+      </div>
 
       {nomeUsuario.length > 4 && (
         <>

@@ -5,6 +5,7 @@ import styles from './ReposList.module.css'
 const ReposList = ({ nomeUsuario }) => {
     const [repos, setRepos] = useState([]);
     const [estaCarregando, setEstaCarregando] = useState(true)
+    const [deuErro, setDeuErro] = useState(false)
 
     useEffect(() => {
         setEstaCarregando(true);
@@ -15,6 +16,9 @@ const ReposList = ({ nomeUsuario }) => {
                 setEstaCarregando(false)
                 setRepos(resJson)
             }, 1000)
+        })
+        .catch(e => {
+            setDeuErro(true) //fazer mensagem de erro
         })
     }, [nomeUsuario])
 
